@@ -1,0 +1,85 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "ignorePatterns": [
+    "next.config.mjs",
+    "tailwind.config.ts",
+    "lint-staged.config.js",
+    ".next/",
+    "generate-docs-imports.mjs",
+    "**/*.doc.js"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/array-type": [
+      "error",
+      {
+        "default": "array-simple"
+      }
+    ],
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "object-shorthand": "error",
+    "jsx-a11y/anchor-is-valid": "off",
+    // @typescript-eslint/recommended changes
+    "@typescript-eslint/no-unsafe-member-access": 1,
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unsafe-return": 1,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-unsafe-assignment": 1,
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-unsafe-call": 1,
+    "semi": 0,
+    "no-extra-semi": 0,
+    "eslint-comments/no-unlimited-disable": 0,
+    "no-bitwise": "off",
+    "no-shadow": [
+      "off",
+      {
+        "hoist": "all"
+      }
+    ],
+    "jsx-quotes": 0,
+    "react-native/no-inline-styles": 0,
+    "curly": ["error", "multi-line"],
+    "no-undef": "error",
+    "no-catch-shadow": 0,
+    "no-useless-escape": 0,
+    "no-console": "warn",
+    "no-spaced-func": 0,
+    "react-hooks/exhaustive-deps": "off",
+    "import/no-anonymous-default-export": "off"
+  }
+}
